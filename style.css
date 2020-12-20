@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root{
+	--success-color:#2ecc71;
+	--error-color:#e74c3c;
+}
+
+*{
+	box-sizing: border-box;
+
+}
+
+body{
+	margin: 0;
+	height: 100vh;
+	background-color: #f9fafb;
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container{
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+	width: 400px;
+}
+
+.form{
+	padding: 30px 40px;
+}
+
+.form h2{
+	text-align: center;
+	margin: 0 0 20px;
+}
+
+.form-control {
+	margin-top: 1rem;
+	margin-bottom: 5px;
+	padding-bottom: 0;
+	position: relative;
+}
+
+
+.form-control label{
+	color: #777;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form-control input{
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	width: 100%;
+	display: block;
+	/* padding: 10px; */
+	padding:10px 35px 10px 15px;
+	font-size: 14px;
+}
+
+.form-control input:focus{
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input{
+	border-color: var(--success-color);
+}
+
+.form-control.error input{
+	border-color: var(--error-color);
+}
+
+
+.form-control i{
+	position: absolute;
+	right: 10px;
+	top: 40px;
+	cursor: pointer;
+}
+
+/* #form > div:nth-child(4) i{
+	position: absolute;
+	right: 10px;
+	top: 40px;
+	cursor: pointer;
+} */
+
+.form-control small{
+	display: inline-block;
+	color: #777;
+	position: relative;
+	left: 6px;
+	margin: 0;
+}
+
+div:nth-child(3) > small, div:nth-child(5) > small{
+	display: none;
+}
+
+div.form-control.error small{
+	color: var(--error-color);
+}
+
+#form > div:nth-child(4) > small{
+	display: inline-block;
+	margin-left: 3px;
+	position: relative;
+}
+
+
+.form button{
+	cursor: pointer;
+	background-color: #3498db;
+	border: 2px solid #3498db;
+	border-radius: 4px;
+	color: white;
+	display: block;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 1.2rem;
+	width: 100%;
+
+}
